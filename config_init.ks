@@ -22,10 +22,10 @@ class config_plugin{
 	var close_y = kag.scHeight - 200;  //閉じるボタンのy座標
 	
 	//開始時に呼ばれるサブルーチン
-	var start_sub_label	= '*config_sub'; //ラベル名
+	var start_sub_label	= '*config_sub_start'; //ラベル名
 	var start_sub_storage	= 'config_sub.ks'; //ファイル名
 	//終了時に呼ばれるサブルーチン
-	var close_sub_label	= '*config_sub'; //ラベル名
+	var close_sub_label	= '*config_sub_close'; //ラベル名
 	var close_sub_storage	= 'config_sub.ks'; //ファイル名
 	
 	//ウィンドウモードの切り替えだけは即座に反映したいだろうから

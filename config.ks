@@ -29,7 +29,7 @@ kag.fore.base.cursorY = kag.scHeight/2;
 @layopt index="&2000000+100" layer="&kag.numCharacterLayers - 1"
 @layopt index="&2000000+200" layer="&kag.numMessageLayers - 1"
 ; 背景
-@image layer="&kag.numCharacterLayers-1" storage=&config_plugin_obj.back page=fore visible=true
+@image layer="&kag.numCharacterLayers-1" storage=&config_plugin_obj.back[config_plugin_obj.nowpage-1] page=fore visible=true
 ; メッセージレイヤの設定をします
 @current layer="&'message' + (kag.numMessageLayers - 1)"
 @position opacity=0 marginb=0 marginl=0 marginr=0 margint=0 left=0 top=0 width=&kag.scWidth height=&kag.scHeight visible=true
@@ -134,6 +134,9 @@ with(tf.config_slider[29]){ .countpage = 0; .visible = config_plugin_obj.nowpage
 
 ;ページを替えたときに戻る
 *pagedraw
+
+@image layer="&kag.numCharacterLayers-1" storage=&config_plugin_obj.back[config_plugin_obj.nowpage-1] page=fore visible=true
+
 @iscript
 tf.config_togglebutton[0].setOptions(  %[visible:config_plugin_obj.nowpage == 1 ? config_plugin_obj.button_01_visible : 0]);
 tf.config_togglebutton[1].setOptions(  %[visible:config_plugin_obj.nowpage == 1 ? config_plugin_obj.button_02_visible : 0]);
@@ -244,5 +247,7 @@ delete tf.config_togglebutton;
 @current layer=message0
 ;終了時サブルーチンを呼ぶ
 @call storage=&config_plugin_obj.close_sub_storage target=&config_plugin_obj.close_sub_label
-@return
-
+;@return
+@return cond="!kag.canStore()"
+@return cond="tf.pre_menu_mode == 0 || tf.pre_menu_mode == 2"
+@jump storage=Menu.ks target=*rclick_return cond="tf.pre_menu_mode == 1"

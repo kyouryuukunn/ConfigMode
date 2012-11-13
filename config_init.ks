@@ -38,32 +38,32 @@ class config_plugin{
 
 
 //ここを書き換える↓------------------------------------------------------- 
-	var back = 'config_bg'; // 背景(透明部分には直前のゲーム画面を表示)
+	var back = ['config_bg', 'black', 'black']; // 1, 2, 3ページの背景(透明部分には直前のゲーム画面を表示)
 	var slider_base = 'slider_base'; // スライダーの背景
 	var slider_tab = 'slider_tab';   // スライダーのつまみ(ボタンと同じ構成)
 	var graphic = 'graphic';		//トグルボタンの画像を指定(詳しくはKLayers.txtのKToggleButtonLayerを参照, basegraphicはいらないっぽい)
 	
 	var close_button = 'config_close'; //閉じるボタン
 	var close_x = kag.scWidth - 100;   //閉じるボタンのx座標
-	var close_y = kag.scHeight - 100;  //閉じるボタンのy座標
+	var close_y = kag.scHeight - 50;  //閉じるボタンのy座標
 	
 	var nowpage = 1; //現在のページ
 	//複数ページを使われないなら適当な画像を指定して非表示にする
 	//(トグルボタンと同じ形式)
 	//ページ1のボタン
 	var page1_button = 'graphic';  //ぺージ1ボタン
-	var page1_visible = 0; //ぺージ1ボタンを表示するか
-	var page1_pos = [0, 0];   //ぺージ1ボタンの座標
+	var page1_visible = 1; //ぺージ1ボタンを表示するか
+	var page1_pos = [kag.scWidth-300, 0];   //ぺージ1ボタンの座標
 	
 	//ページ2のボタン
 	var page2_button = 'graphic';  //ぺージ2ボタン
-	var page2_visible = 0; 		   //ぺージ2ボタンを表示するか
-	var page2_pos = [100, 0];   //ぺージ2ボタンの座標
+	var page2_visible = 1; 		   //ぺージ2ボタンを表示するか
+	var page2_pos = [kag.scWidth-200, 0];   //ぺージ2ボタンの座標
 	
 	//ページ3のボタン
 	var page3_button = 'graphic';  //ぺージ3ボタン
-	var page3_visible = 0; 		    //ぺージ3ボタンを表示するか
-	var page3_pos = [200, 0];   //ぺージ3ボタンの座標
+	var page3_visible = 1; 		    //ぺージ3ボタンを表示するか
+	var page3_pos = [kag.scWidth-100, 0];   //ぺージ3ボタンの座標
 	
 	//開始時に呼ばれるサブルーチン
 	var start_sub_label	= '*config_sub_start'; //ラベル名

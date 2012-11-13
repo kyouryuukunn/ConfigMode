@@ -12,6 +12,8 @@
 
 
 ;各項目の変更を即座に反映したいときはここに記述する
+;メンバ変数config_plugin_obj.button_01から45に
+;値がはいっている
 *config_sub_button_01
 @jump storage=config.ks target=*return
 *config_sub_button_02
@@ -103,6 +105,8 @@
 @jump storage=config.ks target=*return
 
 ;スライダー用サブルーチン
+;メンバ変数config_plugin_obj.slider_01から30に
+;値がはいっている
 *config_sub_slider_01
 @jump storage=config.ks target=*return
 *config_sub_slider_02

@@ -18,11 +18,12 @@ class config_plugin{
 
 
 //ここを書き換える↓------------------------------------------------------- 
-	//複数ページを使われないなら2ページ目から空欄にする
+	//複数ページを使わないなら2ページ目から空欄にする
 	var back = ['config_bg1', 'config_bg2', 'config_bg3']; // 1, 2, 3ページの背景(透明部分には直前のゲーム画面を表示)
 	var slider_base = 'slider_base'; // スライダーの背景
 	var slider_tab = 'slider_tab';   // スライダーのつまみ(ボタンと同じ構成)
-	var graphic = 'graphic';	//トグルボタンの画像を指定(詳しくはKLayers.txtのKToggleButtonLayerを参照, basegraphicはいらないっぽい)
+	var graphic = 'graphic';	//トグルボタンの画像を指定(左から通常表示/チェックされた状態/通常状態でマウスカーソルが当たった状態)
+								/(詳しくはKLayers.txtのKToggleButtonLayerを参照, basegraphicはいらないっぽい
 	
 	var close_button = 'config_close'; //閉じるボタン
 	var close_x = kag.scWidth - 100;   //閉じるボタンのx座標

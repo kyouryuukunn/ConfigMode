@@ -32,6 +32,7 @@ config_sub.ksの
 使用法
 
 config_init.ksの変数を各自必要に応じて設定する
+config_sub.ksに実際の処理を書く
 コメントを参照すればわかるはず。
 詳しくはサンプル参照。設定が出来たら
 first.ksで次のようにconfig_init.ksを呼び出す

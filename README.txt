@@ -28,8 +28,7 @@ config_sub.ksの
 
 config_init.ksの変数を各自必要に応じて設定する
 コメントを参照すればわかるはず。
-例としてconfig_init.ks,config_sub.ksにはある程度
-書き込んである。設定が出来たら
+詳しくはサンプル参照。設定が出来たら
 first.ksで次のようにconfig_init.ksを呼び出す
 @call storage=config_init.ks
 

@@ -6,31 +6,11 @@ if (sf.config_init === void)
 {
 //初期設定 初回のみ設定したい項目を設定
 //ここを書き換える↓------------------------------------------------------- 
-	sf.saveAsk = 1; //セーブ上書き時に確認する
-	sf.loadAsk = 1; //ロード時に確認する
-	sf.qsaveAsk = 0; //クイックセーブ時に確認する
-	sf.qloadAsk = 1; //クイックロード時に確認する
-	sf.returnAsk = 1; //前に戻るで確認する
-	sf.titleAsk = 1; //タイトルに戻るで確認する
-	sf.exitAsk = 1; //終了時に確認する
-	sf.autocontinue = 1; //選択肢後もオートモードを続ける
-	sf.skipcontinue = 1; //選択肢後もスキップモードを続ける
-	sf.sceneskip = 1; //シーン毎のスキップをする
-	sf.menu_mode = 0; //0:マウスオンメニューを使用する
-			  //1:右クリックメニューを使用する
-			  //2:システムボタンを使用する
-	sf.messageopacity = 128; //メッセージ枠の透明度
-	
-	sf.bgmvolume = kag.bgm.buf1.volume2;
-	sf.sevolume = kag.se[0].volume2;
-	sf.config_init = 1;
+
+//ここを書き換える↑------------------------------------------------------- 
 }
 
-//自前の終了処理に置き替える
-kag.askOnClose=false;
-
-kag.bgm.buf1.volume2 = sf.bgmvolume;
-kag.se[0].volume2 = sf.sevolume;
+//ここを書き換える↓------------------------------------------------------- 
 //ここを書き換える↑------------------------------------------------------- 
 
 //config_pluginクラスに必要な変数、関数をまとめる
@@ -38,10 +18,11 @@ class config_plugin{
 
 
 //ここを書き換える↓------------------------------------------------------- 
-	var back = ['config_bg', 'black', 'black']; // 1, 2, 3ページの背景(透明部分には直前のゲーム画面を表示)
+	//複数ページを使われないなら2ページ目から空欄にする
+	var back = ['config_bg1', 'config_bg2', 'config_bg3']; // 1, 2, 3ページの背景(透明部分には直前のゲーム画面を表示)
 	var slider_base = 'slider_base'; // スライダーの背景
 	var slider_tab = 'slider_tab';   // スライダーのつまみ(ボタンと同じ構成)
-	var graphic = 'graphic';		//トグルボタンの画像を指定(詳しくはKLayers.txtのKToggleButtonLayerを参照, basegraphicはいらないっぽい)
+	var graphic = 'graphic';	//トグルボタンの画像を指定(詳しくはKLayers.txtのKToggleButtonLayerを参照, basegraphicはいらないっぽい)
 	
 	var close_button = 'config_close'; //閉じるボタン
 	var close_x = kag.scWidth - 100;   //閉じるボタンのx座標
@@ -73,10 +54,10 @@ class config_plugin{
 	var close_sub_storage	= 'config_sub.ks'; //ファイル名
 	
 	// 各ボタン、スライダーの操作する変数
-	// ボタンはトグルボタンに合わせて0か1
 	//ボタンは1ページ15個づつ
 	//スライダーは1ぺージ10個づつある
 	
+	// ボタンはトグルボタンに合わせて0か1をとる
 	//1ページ目
 	var button_01 = 0;
 	var button_02 = 0;

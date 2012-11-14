@@ -25,8 +25,8 @@ config_sub.ksの*config_sub_close
 
 また、ウィンドウモードの切り替えのように即座に処理をしたいときは
 config_sub.ksの
-*config_sub_button_01~45
-*config_sub_slider_01~30
+*config_sub_button_00~44
+*config_sub_slider_00~29
 の該当するラベルに記述する。
 
 使用法

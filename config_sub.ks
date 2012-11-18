@@ -1,4 +1,9 @@
+;各トグルボタン、スライダーの値には
+;config_plugin_obj.togglebutton_00~44、config_plugin_obj.slider_00~14
+;からアクセス出来る
+
 ;開始時の処理
+;ここでトグルボタン、スライダーの初期状態を決める
 *config_sub_start
 @return
 

@@ -184,7 +184,4 @@ delete tf.config_button;
 kag.onMouseWheel = config_onMouseWheel_org;
 @endscript
 
-;@return
-@return cond="!kag.canStore()"
-@return cond="tf.pre_menu_mode == 0 || tf.pre_menu_mode == 2"
-@jump storage=Menu.ks target=*rclick_return cond="tf.pre_menu_mode == 1"
+@return
